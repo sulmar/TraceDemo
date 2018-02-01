@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using System.Net;
 
 namespace TraceDemo
 {
@@ -10,6 +7,22 @@ namespace TraceDemo
     {
         static void Main(string[] args)
         {
+            TraceTest();
+
+           // WebClientTest();
+        }
+
+        private static void TraceTest()
+        {
+            Trace.TraceInformation("Information Hello");
+            Trace.TraceWarning("Warning Hello");
+            Trace.TraceError("Error Hello");
+        }
+
+        private static void WebClientTest()
+        {
+            var webClient = new WebClient();
+            webClient.DownloadString("http://somehost/nosuchfile.txt");
         }
     }
 }
