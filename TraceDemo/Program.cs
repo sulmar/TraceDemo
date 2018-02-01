@@ -17,6 +17,7 @@ namespace TraceDemo
             Trace.TraceInformation("Information Hello");
             Trace.TraceWarning("Warning Hello");
             Trace.TraceError("Error Hello");
+            
         }
 
         private static void WebClientTest()
